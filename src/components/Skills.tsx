@@ -54,7 +54,7 @@ const Skills = () => {
     <section id="skills" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">My Skills</h2>
+          <h2 className="text-5xl font-extrabold text-gray-900 relative inline-block">My Skills</h2>
           <div className="w-20 h-1 bg-indigo-600 mx-auto mb-6 rounded-full"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             I specialize in crafting full-stack web applications, deploying scalable solutions, and optimizing user experience across platforms.

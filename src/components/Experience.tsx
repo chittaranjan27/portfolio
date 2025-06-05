@@ -12,7 +12,7 @@ const Experience = () => {
       company: "EOXS",
       period: "Mar 2025 - Present",
       description: "Handling API development and integration and Managing DevOps workflows, automating CI/CD pipelines, and optimizing cloud infrastructure for seamless deployment.",
-      skills: ["Java", "Odoo", "Github", "Bitbucket", "Jira", "PostgreSQL"]
+      skills: ["Python", "Odoo", "Bitbucket", "XML", "PostgreSQL"]
     },
     {
       icon: <Briefcase className="text-purple-600" size={20} />,
@@ -37,7 +37,7 @@ const Experience = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-extrabold text-gray-900 relative inline-block">
-            My Journey
+            Experience
             <span className="absolute left-0 -bottom-2 w-full h-1 bg-gradient-to-r from-indigo-600 to-purple-500"></span>
           </h2>
         </div>
