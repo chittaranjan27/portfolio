@@ -10,7 +10,7 @@ const Experience = () => {
       icon: <Briefcase className="text-indigo-600" size={20} />,
       title: "Software Developer Intern",
       company: "EOXS",
-      period: "Mar 2025 - Present",
+      period: "Mar 2025 - MAY 2025",
       description: "Handling API development and integration and Managing DevOps workflows, automating CI/CD pipelines, and optimizing cloud infrastructure for seamless deployment.",
       skills: ["Python", "Odoo", "Bitbucket", "XML", "PostgreSQL"]
     },

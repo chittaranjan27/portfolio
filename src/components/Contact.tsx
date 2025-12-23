@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from 'lucide-rea
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{ name: string; email: string; subject: string; message: string }>({
     name: '',
     email: '',
     subject: '',
@@ -11,9 +11,9 @@ const Contact = () => {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState({ text: '', isError: false });
+  const [submitMessage, setSubmitMessage] = useState<{ text: string; isError: boolean }>({ text: '', isError: false });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -21,7 +21,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -127,7 +127,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-500 text-sm font-medium uppercase tracking-wider mb-1">Location</h4>
-                    <p className="text-gray-800 text-lg font-medium">Odisha, INDIA</p>
+                    <p className="text-gray-800 text-lg font-medium">Bengaluru, INDIA</p>
                   </div>
                 </motion.div>
 
