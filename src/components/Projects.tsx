@@ -1,38 +1,38 @@
 import React from 'react';
-import { ExternalLink, Github, LayoutGrid, List, Grid2x2, PanelTop } from 'lucide-react';
+import {Github, LayoutGrid, List, Grid2x2} from 'lucide-react';
 
 const projects = [
+   {
+    title: "stock-tracker-app",
+    description: "A modern web application for tracking stocks, managing watchlists, and receiving personalized market insights via email. Built with Next.js, MongoDB, and TradingView widgets.",
+    image: "/stock.png",
+    tags: ["Next.js","TypeScript","Tailwind CSS","MongoDB","better-auth","Nodemailer","Finnhub API","Inngest"],
+    liveLink: "https://stock-tracker-app-one.vercel.app/sign-in",
+    githubLink: "https://github.com/chittaranjan27/stock_tracker_app"
+  },
   {
     title: "Real-time Chat App",
     description: "A chat application that allows users to communicate in real-time with features like message history and online status.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    tags: ["React", "Express", "Tailwind CSS", "Socket.io", "MongoDB", "Cloudinary"],
+    tags: ["React", "Express", "Tailwind CSS","JWT", "Socket.io", "MongoDB", "Cloudinary"],
     liveLink: "https://example.com",
     githubLink: "https://github.com/chittaranjan27/real-time-chat"
   },
   {
-    title: "Employee-Mng-System",
-    description: "I build a fully functional website UI and use localStorage for data persistence.",
-    image: "https://imgs.search.brave.com/z-zZymUPDihTeKuRAyPMKRQWQAR4HZ8CYsX5_hX2gog/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJvb2ZodWIuY29t/L2FydGljbGVzL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIxLzA3/L0FsbC1pbi1PbmUt/RW1wbG8ucG5n",
-    tags: ["React", "Localstorage", "Material UI", "Styled Components"],
-    liveLink: "https://example.com",
-    githubLink: "https://github.com/chittaranjan27/employee-mng-system"
-  },
-  {
-    title: "Task Management App",
-    description: "Stay Organized, Stay Productive! Your Tasks, Your Way – Simplified and Streamlined.",
+    title: "AI Document Understanding Assistant",
+    description: "Built an AI-powered assistant that answers user questions from uploaded PDFs using a Retrieval-Augmented Generation (RAG) approach",
     image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    tags: ["React", "Redux", "Tailwind CSS", "Material UI"],
+    tags: ["Python", "FastAPI", "RAG", "Gemini ai", "Vector DB", "Strimline"],
     liveLink: "https://example.com",
-    githubLink: "https://github.com/chittaranjan27/Todos-in-react"
+    githubLink: "https://github.com/chittaranjan27/ragAI-app"
   },
   {
-    title: "Animated Website",
-    description: "An eye-catching animated website built with modern web technologies to deliver a dynamic and interactive user experience.",
-    image: "https://imgs.search.brave.com/fbCYvCRI15IP_3Yvfm8xVq9QCdGZYw8zi-rutf-18Ik/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJ1cGxvYWQv/OTU5NTc3Mi9maWxl/L3N0aWxsLTVmYzA2/MjYyNGMyNmFjYmM3/MmE5ODBjMDJiNjI0/NzMyLnBuZz9yZXNp/emU9NDAweDA",
-    tags: ["HTML", "CSS", "JAVASCRIPT"],
+    title: "e-comm-Healtcare",
+    description: "Developed a full-stack E-commerce platform for healthcare products, search, and purchase medicines, schedule a meeting with specialist and wellness products.",
+    image: "/e-com.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS","Zustand", "MongoDB", "Rozorpay","JWT","Google calendar API"],
     liveLink: "https://example.com",
-    githubLink: "https://github.com/chittaranjan27/Animated_websites"
+    githubLink: "https://github.com/chittaranjan27/e-comm-healtcare-"
   }
 ];
 

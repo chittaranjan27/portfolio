@@ -3,7 +3,7 @@ import { Briefcase, GraduationCap, Code, ArrowRight } from "lucide-react";
 
 const Experience = () => {
   // Replace with your Google Drive shareable link
-  const resumeUrl = "https://drive.google.com/file/d/1LkPrZtIZLsLtzpDbihOLE0mWuF4tvOXT/view?usp=sharing";
+  const resumeUrl = "https://drive.google.com/file/d/1mX7I__1d2bBse0zdmsDvjzL4-atdEyvp/view?usp=sharing";
 
   const experiences = [
     {
