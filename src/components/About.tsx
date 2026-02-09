@@ -75,22 +75,24 @@ const About = () => {
       </motion.div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="inline-block relative"
-          >
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <div className="inline-block relative">
             <motion.h2
-              className="text-5xl font-extrabold text-gray-900 relative inline-block"
+              className="text-5xl md:text-6xl font-extrabold text-gray-900 relative inline-block mb-4"
             >
               About Me
               <motion.span
                 initial={{ width: 0 }}
-                animate={{ width: "100%" }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                className="absolute left-0 -bottom-2 w-full h-1 bg-gradient-to-r from-indigo-600 to-purple-500"
+                className="absolute left-0 -bottom-2 w-full h-1 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 rounded-full"
               />
             </motion.h2>
             
@@ -101,13 +103,14 @@ const About = () => {
             >
               <Sparkles className="text-yellow-400" size={32} />
             </motion.div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
 
         {/* Introduction Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
@@ -133,7 +136,8 @@ const About = () => {
         {/* Skills Grid */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
         >
@@ -193,9 +197,10 @@ const About = () => {
           {/* Education Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="lg:w-1/2 p-8 bg-white/70 backdrop-blur-md rounded-2xl shadow-lg border border-white/30 relative overflow-hidden"
+            className="lg:w-1/2 p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 relative overflow-hidden hover:shadow-2xl transition-all"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 z-0" />
             <div className="relative z-10">
@@ -257,11 +262,12 @@ const About = () => {
           {/* Stats Section */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="lg:w-1/2"
           >
-            <div className="p-8 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl shadow-lg border border-white/30 h-full relative overflow-hidden">
+            <div className="p-8 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl shadow-xl border border-indigo-100 h-full relative overflow-hidden hover:shadow-2xl transition-all">
               <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
               <div className="relative z-10">
                 <div className="flex items-center mb-6">
@@ -327,7 +333,8 @@ const About = () => {
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-center"
         >

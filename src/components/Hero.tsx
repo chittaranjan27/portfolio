@@ -149,20 +149,19 @@ const Hero = () => {
           >
             <motion.a
               href="#contact"
-              className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
-              whileHover={{ scale: 1.05 }}
+              className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
+              whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.97 }}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 initial={{ x: "-100%" }}
                 whileHover={{ x: "0%" }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
               />
-              <span className="relative z-10 flex items-center">
+              <span className="relative z-10 flex items-center gap-2">
                 Contact Me 
                 <motion.span
-                  className="ml-1"
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
@@ -173,17 +172,16 @@ const Hero = () => {
 
             <motion.a
               href="#projects"
-              className="px-6 py-3 bg-white border border-indigo-200 text-indigo-600 font-semibold rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
-              whileHover={{ scale: 1.05 }}
+              className="px-8 py-4 bg-white/90 backdrop-blur-sm border-2 border-indigo-200 text-indigo-600 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:border-indigo-300 transition-all duration-300 group relative overflow-hidden"
+              whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.97 }}
             >
               <motion.div
-                className="absolute inset-0 bg-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 bg-gradient-to-r from-indigo-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               />
-              <span className="relative z-10 flex items-center">
+              <span className="relative z-10 flex items-center gap-2">
                 View Projects 
                 <motion.span
-                  className="ml-1"
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
                 >
@@ -229,13 +227,13 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className={`w-10 h-10 flex items-center justify-center rounded-full bg-white text-gray-600 shadow-md transition-all ${social.color}`}
-                whileHover={{ scale: 1.1 }}
+                className={`w-12 h-12 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-sm text-gray-600 shadow-lg hover:shadow-xl transition-all ${social.color} border border-gray-100`}
+                whileHover={{ scale: 1.15, y: -3, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
                 <motion.span
                   animate={social.animation}
-                  transition={{ duration: 1, repeat: Infinity }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
                 >
                   {social.icon}
                 </motion.span>

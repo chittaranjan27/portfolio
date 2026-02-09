@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout, Server, Cloud, GitBranch } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const skillCategories = [
@@ -51,38 +52,90 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-extrabold text-gray-900 relative inline-block">My Skills</h2>
-          <div className="w-20 h-1 bg-indigo-600 mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+    <section id="skills" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 via-white to-indigo-50/30 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 relative inline-block mb-4">
+            My Skills
+            <motion.span
+              className="absolute left-0 -bottom-2 w-full h-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-full"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            />
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg mt-6">
             I specialize in crafting full-stack web applications, deploying scalable solutions, and optimizing user experience across platforms.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Scrollable row */}
-        <div className="flex overflow-x-auto space-x-6 scrollbar-hide pb-4">
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
-            <div key={index} className="min-w-[320px] bg-white p-6 rounded-xl shadow-md hover:shadow-lg flex-shrink-0">
-              <div className="flex items-center mb-4">
-                {category.icon}
-                <h3 className="text-xl font-semibold text-gray-800 ml-2">{category.title}</h3>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl flex-shrink-0 border border-gray-100 relative overflow-hidden group"
+            >
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="relative z-10">
+                <div className="flex items-center mb-6">
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="p-2 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg"
+                  >
+                    {category.icon}
+                  </motion.div>
+                  <h3 className="text-xl font-bold text-gray-800 ml-3">{category.title}</h3>
+                </div>
+                <div className="space-y-5">
+                  {category.skills.map((skill, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: (index * 0.1) + (i * 0.05) }}
+                    >
+                      <div className="flex justify-between mb-2">
+                        <span className="text-gray-700 font-semibold text-sm">{skill.name}</span>
+                        <span className="text-indigo-600 font-bold">{skill.level}%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden shadow-inner">
+                        <motion.div
+                          className="h-2.5 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-lg"
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, delay: (index * 0.1) + (i * 0.1), ease: "easeOut" }}
+                        />
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
-              <div className="space-y-4">
-                {category.skills.map((skill, i) => (
-                  <div key={i}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-700 font-medium">{skill.name}</span>
-                      <span className="text-gray-500">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-                      <div className="h-2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500" style={{ width: `${skill.level}%` }} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
